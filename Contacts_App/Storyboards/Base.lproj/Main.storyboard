@@ -8,10 +8,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Contacts-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Contacts_App" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ContactListViewController" customModule="Contacts_App" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -44,13 +44,16 @@
                             <constraint firstItem="xi9-9x-zuJ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="nva-gK-WVY"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="rSd-ur-KCA">
+                    <navigationItem key="navigationItem" title="Contacts" id="rSd-ur-KCA">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="MOL-gb-87N">
                             <connections>
                                 <segue destination="qea-a7-VKF" kind="presentation" id="ZoC-Xt-aMb"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="tableView" destination="xi9-9x-zuJ" id="SYA-pE-pbP"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -73,7 +76,7 @@
                                                 <action selector="cancelButonPressed:" destination="qea-a7-VKF" id="STa-Vd-gp7"/>
                                             </connections>
                                         </barButtonItem>
-                                        <barButtonItem key="rightBarButtonItem" title="Done" id="wLG-AC-cVd">
+                                        <barButtonItem key="rightBarButtonItem" enabled="NO" title="Done" id="wLG-AC-cVd">
                                             <connections>
                                                 <action selector="doneButtonPressed:" destination="qea-a7-VKF" id="2ll-Mj-t5l"/>
                                             </connections>
@@ -125,8 +128,8 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="cNJ-ms-9F9" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="F0J-Cp-5cX">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="F0J-Cp-5cX">
+                        <rect key="frame" x="0.0" y="44" width="414" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
