@@ -16,7 +16,7 @@ class NewContactViewController: UIViewController {
     
     var delegate: NewContactViewControllerDelegate!
     
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -25,7 +25,7 @@ class NewContactViewController: UIViewController {
             action: #selector(firstNameTextFieldDidChanged),
             for: .editingChanged
         )
-
+        
     }
     
     
@@ -37,23 +37,22 @@ class NewContactViewController: UIViewController {
     @IBAction func cancelButonPressed(_ sender: UIBarButtonItem) {
         dismiss(animated: true, completion: nil)
     }
-
-
+    
+    
     @objc private func firstNameTextFieldDidChanged() {
         guard let firstName = firstNameTextField.text else { return }
         doneButton.isEnabled = !firstName.isEmpty
     }
-
+    
     
     private func saveAndExit() {
         guard let firstName = firstNameTextField.text else { return }
         guard let lastName = lastNameTextField.text else { return }
+        let contact = Contact(name: firstName, surname: lastName)
+        StorageManager.shared.save(contact: contact)
         
-        let fullName = "\(firstName) \(lastName)"
-        StorageManager.shared.save(contact: fullName)
-        
-        delegate.saveContact(fullName)
+        delegate.saveContact(contact)
         dismiss(animated: true)
     }
- 
+    
 }

@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		68786F2028C7F4D600C23199 /* StorageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68786F1F28C7F4D600C23199 /* StorageManager.swift */; };
+		68786F2328C7FB5400C23199 /* Contact.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68786F2228C7FB5400C23199 /* Contact.swift */; };
 		68FB509728BE9A1A00E45146 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68FB509628BE9A1A00E45146 /* AppDelegate.swift */; };
 		68FB509928BE9A1A00E45146 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68FB509828BE9A1A00E45146 /* SceneDelegate.swift */; };
 		68FB509B28BE9A1A00E45146 /* ContactListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68FB509A28BE9A1A00E45146 /* ContactListViewController.swift */; };
@@ -19,6 +20,7 @@
 
 /* Begin PBXFileReference section */
 		68786F1F28C7F4D600C23199 /* StorageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageManager.swift; sourceTree = "<group>"; };
+		68786F2228C7FB5400C23199 /* Contact.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Contact.swift; sourceTree = "<group>"; };
 		68FB509328BE9A1A00E45146 /* Contacts_App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Contacts_App.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		68FB509628BE9A1A00E45146 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		68FB509828BE9A1A00E45146 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -85,6 +87,14 @@
 			path = "Storage Manager";
 			sourceTree = "<group>";
 		};
+		68786F2128C7FB1900C23199 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				68786F2228C7FB5400C23199 /* Contact.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		68FB508A28BE9A1A00E45146 = {
 			isa = PBXGroup;
 			children = (
@@ -106,6 +116,7 @@
 			children = (
 				6867164828C2CDDF0016102D /* App */,
 				68786F1E28C7F49F00C23199 /* Storage Manager */,
+				68786F2128C7FB1900C23199 /* Models */,
 				6867164528C2CD8D0016102D /* View Controllers */,
 				6867164628C2CDA60016102D /* Storyboards */,
 				6867164728C2CDC40016102D /* Resources */,
@@ -184,6 +195,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				68786F2328C7FB5400C23199 /* Contact.swift in Sources */,
 				68FB509B28BE9A1A00E45146 /* ContactListViewController.swift in Sources */,
 				68FB509728BE9A1A00E45146 /* AppDelegate.swift in Sources */,
 				68786F2028C7F4D600C23199 /* StorageManager.swift in Sources */,
